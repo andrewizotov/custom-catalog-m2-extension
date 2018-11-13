@@ -6,8 +6,8 @@
   "license": "MIT",
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/andrewizotov/custom-catalog-m2-extension"
+      "type": "git",
+      "url": "git+https://github.com/andrewizotov/custom-catalog-m2-extension"
     }
   ],
   "require": {
