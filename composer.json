@@ -4,23 +4,13 @@
   "type": "magento2-module",
   "version": "0.0.1",
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git+https://github.com/andrewizotov/custom-catalog-m2-extension"
-    }
-  ],
-  "require": {
-
-  },
-  "require-dev": {
-  },
   "authors": [
     {
       "name": "Andrew Izotov",
       "email": "andrew.izotov@yahoo.com"
     }
   ],
+  "minimum-stability": "dev",
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
