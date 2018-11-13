@@ -1,0 +1,30 @@
+{
+  "name": "andrewizotov/custom-catalog-m2-extension",
+  "description": "",
+  "type": "magento2-module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/andrewizotov/custom-catalog-m2-extension"
+    }
+  ],
+  "require": {
+
+  },
+  "require-dev": {
+  },
+  "authors": [
+    {
+      "name": "Andrew Izotov",
+      "email": "andrew.izotov@yahoo.com"
+    }
+  ],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Andrew\\CustomCatalog\\": ""
+    }
+  }
+}
