@@ -9,6 +9,7 @@
     <update handle="styles"/>
     <body>
         <referenceContainer name="content">
+            <uiComponent name="custom_product_listing" />
             <block class="Andrew\CustomCatalog\Block\Adminhtml\Product" name="custom_catalog_products_list"/>
         </referenceContainer>
     </body>
