@@ -8,7 +8,8 @@
     "php": "~7.0.13|~7.1.0",
     "magento/module-catalog": "102.0.*",
     "magento/framework": "101.0.*",
-    "magento/module-ui": "101.0.*"
+    "magento/module-ui": "101.0.*",
+    "php-amqplib/php-amqplib": ">=2.6.1"
   },
   "authors": [
     {
