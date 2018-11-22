@@ -1,6 +1,5 @@
 <?php
 /**
- *
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
@@ -14,9 +13,9 @@ class Index extends \Magento\Catalog\Controller\Adminhtml\Product
     protected $resultPageFactory;
 
     /**
-     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Backend\App\Action\Context                   $context
      * @param \Magento\Catalog\Controller\Adminhtml\Product\Builder $productBuilder
-     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
+     * @param \Magento\Framework\View\Result\PageFactory            $resultPageFactory
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -34,7 +33,9 @@ class Index extends \Magento\Catalog\Controller\Adminhtml\Product
      */
     public function execute()
     {
-        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
+        /**
+ * @var \Magento\Backend\Model\View\Result\Page $resultPage
+*/
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Andrew_CustomCatalog::custom_catalog');
         $resultPage->getConfig()->getTitle()->prepend(__('CustomCatalog > Products'));

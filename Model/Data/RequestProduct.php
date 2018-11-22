@@ -38,7 +38,7 @@ class RequestProduct extends \Magento\Framework\Api\AbstractSimpleObject impleme
     /**
      * Set option
      *
-     * @param string $vpn
+     * @param  string $vpn
      * @return $this
      */
     public function setVpn(string $vpn)
@@ -49,7 +49,7 @@ class RequestProduct extends \Magento\Framework\Api\AbstractSimpleObject impleme
     /**
      * Set option
      *
-     * @param string $info
+     * @param  string $info
      * @return $this
      */
     public function setCopyWriteInfo(string $info)
@@ -60,7 +60,7 @@ class RequestProduct extends \Magento\Framework\Api\AbstractSimpleObject impleme
     /**
      * Set option
      *
-     * @param string $info
+     * @param  string $info
      * @return $this
      */
     public function setEntityId(string $info)

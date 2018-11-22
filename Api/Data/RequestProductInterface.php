@@ -2,7 +2,7 @@
 
 namespace Andrew\CustomCatalog\Api\Data;
 
-interface  RequestProductInterface
+interface RequestProductInterface
 {
     const VPN = 'vpn';
     const COPY_WRITE_INFO = 'copy_write_info';
@@ -32,7 +32,7 @@ interface  RequestProductInterface
     /**
      * Set option
      *
-     * @param string $vpn
+     * @param  string $vpn
      * @return $this
      */
     public function setVpn(string $vpn);
@@ -40,7 +40,7 @@ interface  RequestProductInterface
     /**
      * Set option
      *
-     * @param string $info
+     * @param  string $info
      * @return $this
      */
     public function setCopyWriteInfo(string $info);
@@ -48,7 +48,7 @@ interface  RequestProductInterface
     /**
      * Set option
      *
-     * @param string $info
+     * @param  string $info
      * @return $this
      */
     public function setEntityId(string $info);

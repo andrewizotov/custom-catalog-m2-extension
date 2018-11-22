@@ -32,11 +32,14 @@ class InstallData implements InstallDataInterface
     {
         $setup->startSetup();
 
-        /** @var \Magento\Eav\Setup\EavSetup $eavSetup */
+        /**
+*
+         *
+ * @var \Magento\Eav\Setup\EavSetup $eavSetup
+*/
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
 
         if (version_compare($context->getVersion(), '0.0.1') < 0) {
-
             $eavSetup->addAttribute(
                 \Magento\Catalog\Model\Product::ENTITY,
                 'copy_write_info',
@@ -66,7 +69,6 @@ class InstallData implements InstallDataInterface
                     'group' => 'Andrew Custom Catalog',
                 ]
             );
-
         }
 
         $setup->endSetup();

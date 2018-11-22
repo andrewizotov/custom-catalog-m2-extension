@@ -35,14 +35,14 @@ class ProductDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     /**
      * Construct
      *
-     * @param string $name
-     * @param string $primaryFieldName
-     * @param string $requestFieldName
-     * @param CollectionFactory $collectionFactory
-     * @param \Magento\Ui\DataProvider\AddFieldToCollectionInterface[] $addFieldStrategies
+     * @param string                                                    $name
+     * @param string                                                    $primaryFieldName
+     * @param string                                                    $requestFieldName
+     * @param CollectionFactory                                         $collectionFactory
+     * @param \Magento\Ui\DataProvider\AddFieldToCollectionInterface[]  $addFieldStrategies
      * @param \Magento\Ui\DataProvider\AddFilterToCollectionInterface[] $addFilterStrategies
-     * @param array $meta
-     * @param array $data
+     * @param array                                                     $meta
+     * @param array                                                     $data
      */
     public function __construct(
         $name,
@@ -82,8 +82,8 @@ class ProductDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     /**
      * Add field to select
      *
-     * @param string|array $field
-     * @param string|null $alias
+     * @param  string|array $field
+     * @param  string|null  $alias
      * @return void
      */
     public function addField($field, $alias = null)

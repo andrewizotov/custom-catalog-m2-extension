@@ -1,5 +1,17 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
     <preference for="Andrew\CustomCatalog\Api\ProductInterface" type="Andrew\CustomCatalog\Model\Api\Product"/>
     <preference for="Andrew\CustomCatalog\Api\Data\RequestProductInterface" type="Andrew\CustomCatalog\Model\Data\RequestProduct" />
+    <preference for="Andrew\CustomCatalog\Model\Queue\Adapter\QueueAdapterInterface" type="Andrew\CustomCatalog\Model\Queue\Adapter\Rabbitmq\PhpAmqpLib\Adapter" />
+    <preference for="Andrew\CustomCatalog\Model\Queue\MessageInterface" type="Andrew\CustomCatalog\Model\Queue\Message" />
+    <preference for="Andrew\CustomCatalog\Model\Queue\RabbitmqInterface" type="Andrew\CustomCatalog\Model\Queue\Rabbitmq" />
+
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="run" xsi:type="object">Andrew\CustomCatalog\Console\Command\MessageReceiveCommand</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

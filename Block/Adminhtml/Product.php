@@ -1,4 +1,17 @@
 <?php
+/**
+ * PHP version 7.0.*
+ *
+ * Module Andrew\CustomCatalog\Block
+ *
+ * Container.
+ *
+ * @category Andrew\CustomCatalog
+ * @package  Andrew\CustomCatalog\Model
+ * @author   Andrew Izototv <andrew.izotov@yahoo.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @link     https://github.com/andrewizotov/custom-catalog-m2-extension.git
+ */
 
 namespace Andrew\CustomCatalog\Block\Adminhtml;
 
@@ -7,18 +20,18 @@ class Product extends \Magento\Backend\Block\Widget\Container
     /**
      * @var \Magento\Catalog\Model\Product\TypeFactory
      */
-    protected $_typeFactory;
+    protected $typeFactory;
 
     /**
      * @var \Magento\Catalog\Model\ProductFactory
      */
-    protected $_productFactory;
+    protected $productFactory;
 
     /**
-     * @param \Magento\Backend\Block\Widget\Context $context
+     * @param \Magento\Backend\Block\Widget\Context      $context
      * @param \Magento\Catalog\Model\Product\TypeFactory $typeFactory
-     * @param \Magento\Catalog\Model\ProductFactory $productFactory
-     * @param array $data
+     * @param \Magento\Catalog\Model\ProductFactory      $productFactory
+     * @param array                                      $data
      */
     public function __construct(
         \Magento\Backend\Block\Widget\Context $context,
@@ -27,8 +40,8 @@ class Product extends \Magento\Backend\Block\Widget\Container
         array $data = []
     ) {
 
-        $this->_productFactory = $productFactory;
-        $this->_typeFactory = $typeFactory;
+        $this->productFactory = $productFactory;
+        $this->typeFactory = $typeFactory;
 
         parent::__construct($context, $data);
     }
@@ -61,7 +74,7 @@ class Product extends \Magento\Backend\Block\Widget\Container
     protected function _getAddProductButtonOptions()
     {
         $splitButtonOptions = [];
-        $types = $this->_typeFactory->create()->getTypes();
+        $types = $this->typeFactory->create()->getTypes();
         uasort(
             $types,
             function ($elementOne, $elementTwo) {
@@ -83,14 +96,14 @@ class Product extends \Magento\Backend\Block\Widget\Container
     /**
      * Retrieve product create url by specified product type
      *
-     * @param string $type
+     * @param  string $type
      * @return string
      */
     protected function _getProductCreateUrl($type)
     {
         return $this->getUrl(
-            'catalog/*/new',
-            ['set' => $this->_productFactory->create()->getDefaultAttributeSetId(), 'type' => $type]
+            'catalog/product/new',
+            ['set' => $this->productFactory->create()->getDefaultAttributeSetId(), 'type' => $type]
         );
     }
 
