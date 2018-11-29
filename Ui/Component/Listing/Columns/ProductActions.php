@@ -58,7 +58,7 @@ class ProductActions extends Column
                         'custom_catalog/catalog_product/edit',
                         ['id' => $item['entity_id'], 'store' => $storeId]
                     ),
-                    'label' => __('EditВВ   '),
+                    'label' => __('Edit'),
                     'hidden' => false,
                 ];
             }
