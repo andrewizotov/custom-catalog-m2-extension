@@ -139,10 +139,10 @@
                 <label translate="true">Copy write info</label>
             </settings>
         </column>
-        <!--<actionsColumn name="actions" class="Magento\Catalog\Ui\Component\Listing\Columns\ProductActions" sortOrder="200">
+        <actionsColumn name="actions" class="Andrew\CustomCatalog\Ui\Component\Listing\Columns\ProductActions" sortOrder="200">
             <settings>
                 <indexField>entity_id</indexField>
             </settings>
-        </actionsColumn>-->
+        </actionsColumn>
     </columns>
 </listing>

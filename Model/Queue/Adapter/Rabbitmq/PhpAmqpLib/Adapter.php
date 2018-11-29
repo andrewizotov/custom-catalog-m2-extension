@@ -2,9 +2,9 @@
 /**
  * PHP version 7.0.*
  *
- * Module Andrew\CustomCatalog\Model\Api
+ * Adapter for PhpAmqpLib
  *
- * Message object
+ * Wrapper PhpAmqpLib
  *
  * @category  Andrew\CustomCatalog\Model\Queue\Adapter\Rabbitmq\PhpAmqpLib
  * @package   Andrew\CustomCatalog\Model

@@ -3,5 +3,7 @@
     <module name="Andrew_CustomCatalog" setup_version="0.0.1"/>
     <sequence>
         <module name="Magento_Catalog"/>
+        <module name="Magento_CatalogInventory"/>
+        <module name="Magento_Ui"/>
     </sequence>
 </config>
