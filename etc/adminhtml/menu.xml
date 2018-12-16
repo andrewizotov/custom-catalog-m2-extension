@@ -2,6 +2,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Andrew_CustomCatalog::custom_catalog" title="Custom Catalog" translate="title" module="Andrew_CustomCatalog" sortOrder="3" parent="Magento_Catalog::inventory" action="custom_catalog/catalog/" resource="Andrew_CustomCatalog::custom_catalog"/>
+        <add id="Andrew_CustomCatalog::custom_catalog" title="Custom Catalog" translate="title" module="Andrew_CustomCatalog" sortOrder="3" parent="Magento_Catalog::inventory" action="custom_catalog/catalog_product/" resource="Andrew_CustomCatalog::custom_catalog"/>
     </menu>
 </config>

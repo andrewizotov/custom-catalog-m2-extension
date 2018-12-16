@@ -13,6 +13,7 @@ class ReceiveCallback
             $productRepository = $objectManager->get(\Magento\Catalog\Api\ProductRepositoryInterface::class);
             $product = $productRepository->getById($productData['entity_id']);
             if ($product) {
+                $product->setStoreId(0);
                 $product->setVpn($productData['vpn']);
                 $product->setCopyWriteInfo($productData['copy_write_info']);
                 $productRepository->save($product);

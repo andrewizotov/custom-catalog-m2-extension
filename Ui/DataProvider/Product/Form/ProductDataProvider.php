@@ -45,19 +45,11 @@ class ProductDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      */
     public function getData()
     {
-        if (isset($this->_loadedData)) {
-            return $this->_loadedData;
-        }
-
-        $products = $this->getCollection()
+        $product = $this->getCollection()
             ->addAttributeToSelect('vpn')
             ->addAttributeToSelect('copy_write_info')
-            ->getItems();
+            ->getFirstItem();
 
-        foreach ($products as $product) {
-            $this->_loadedData[$product->getId()] = $product->getData();
-        }
-
-        return $this->_loadedData;
+        return [$product->getId()=>$product->getData()];
     }
 }

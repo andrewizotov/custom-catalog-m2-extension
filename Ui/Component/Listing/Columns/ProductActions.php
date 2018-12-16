@@ -64,6 +64,6 @@ class ProductActions extends Column
             }
         }
 
-        return $dataSource
+        return $dataSource;
     }
 }
